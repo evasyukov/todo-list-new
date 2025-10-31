@@ -10,7 +10,7 @@ export default function TodoPage() {
   const [todo, setTodo] = useState(null)
   const [editing, setEditing] = useState(false)
   const [editingText, setEditingText] = useState("")
-  const [notFound, setNotFound] = useState(false) // 👈 добавляем флаг
+  const [notFound, setNotFound] = useState(false)
 
   useEffect(() => {
     fetch(`http://localhost:3005/todos/${id}`)
@@ -80,7 +80,7 @@ export default function TodoPage() {
 
         <div className="todo-id__management">
           <div
-            className={`todo-id_completed ${todo.completed}`}
+            className={`todo-id_status ${todo.completed ? "completed" : "not_completed"}`}
             onClick={toggleCompleted}
           >
             {todo.completed ? "выполнено" : "не выполнено"}

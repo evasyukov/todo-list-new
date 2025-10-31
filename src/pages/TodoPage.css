@@ -48,7 +48,7 @@
     gap: 10px;
 }
 
-.todo-id_completed {
+.todo-id_status {
     width: 100px;
     padding: 0 10px;
 
@@ -63,19 +63,19 @@
 }
 
 /* статус дела */
-.true {
+.completed {
     background-color: #02ff0f93;
 }
 
-.true:hover {
+.completed:hover {
     background-color: #02ff0fc0;
 }
 
-.false {
+.not_completed {
     background-color: #ff02029d;
 }
 
-.false:hover {
+.not_completed:hover {
     background-color: #ff02026b;
 }
 

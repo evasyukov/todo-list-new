@@ -1,0 +1,30 @@
+.sorting {
+  margin-bottom: 30px;
+
+  width: 840px;
+  height: 40px;
+
+  display: flex;
+  justify-content: space-around;
+
+
+}
+
+.sorting__search {
+  width: 300px;
+
+  padding: 10px 7px;
+
+  border: 1px solid #858585;
+  border-radius: 5px;
+}
+
+.sorting__abc {
+  display: flex;
+  align-items: center;
+
+  & :hover {
+    color: #fff;
+    cursor: pointer;
+  }
+}

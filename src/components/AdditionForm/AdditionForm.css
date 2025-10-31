@@ -1,0 +1,29 @@
+.add-todo {
+  margin-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.add-todo__textarea {
+  width: 400px;
+
+  padding: 10px;
+
+  border-radius: 5px;
+  resize: none;
+}
+
+.add-todo__textarea:focus {
+  border: 1px solid #ffffffc9;
+  outline: none;
+}
+
+.add-todo_button {
+  width: 120px;
+  height: 30px;
+
+  cursor: pointer;
+}

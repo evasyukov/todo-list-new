@@ -1,0 +1,61 @@
+/* список дел */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 500px;
+
+  padding: 15px;
+  margin-bottom: 20px;
+
+  border: 1px solid #ffffffde;
+  border-radius: 7px;
+}
+
+.todo__title {
+  max-width: 300px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.todo__title:hover{
+  color: #fff;
+}
+
+.todo__management {
+  display: flex;
+  gap: 10px;
+}
+
+.todo_completed {
+  width: 100px;
+  padding: 0 10px;
+
+  border-radius: 5px;
+
+  text-align: center;
+  line-height: 60px;
+  font-size: 14px;
+
+  user-select: none;
+}
+
+/* статус дела */
+.true {
+  background-color: #02ff0f93;
+}
+
+.false {
+  background-color: #ff02029d;
+}

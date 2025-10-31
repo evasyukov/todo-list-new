@@ -20,7 +20,7 @@ export function useRequestGetTodos(refresh) {
       .finally(() => {
         setTimeout(() => {
           SetIsLoading(false)
-        }, 100) // сымитируем ситуацию запроса на сервер
+        }, 500) // сымитируем ситуацию запроса на сервер
       })
   }, [refresh])
 

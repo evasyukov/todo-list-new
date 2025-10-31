@@ -1,3 +1,5 @@
+import './AdditionForm.css'
+
 export default function AdditionForm({
   todoText,
   validateText,

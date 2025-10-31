@@ -1,0 +1,100 @@
+/* список дел */
+.todo-id {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 800px;
+    height: 110px;
+
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.todo-id__title {
+    max-width: 400px;
+
+    cursor: pointer;
+
+    text-align: left;
+    word-break: normal;
+
+    border-left: 1px solid #ffffffde;
+    border-radius: 7px;
+
+    padding: 15px;
+
+    & textarea {
+        width: 400px;
+        font-size: inherit;
+        font-family: inherit;
+        padding: 5px;
+        border: 1px solid #ffffffde;
+        border-radius: 5px;
+        resize: none;
+        background: transparent;
+        color: white;
+        outline: none;
+        animation: fadeIn 0.2s ease;
+    }
+}
+
+.todo-id__title:hover {
+    color: #fff;
+}
+
+.todo-id__management {
+    display: flex;
+    gap: 10px;
+}
+
+.todo-id_completed {
+    width: 100px;
+    padding: 0 10px;
+
+    border-radius: 5px;
+
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+/* статус дела */
+.true {
+    background-color: #02ff0f93;
+}
+
+.true:hover {
+    background-color: #02ff0fc0;
+}
+
+.false {
+    background-color: #ff02029d;
+}
+
+.false:hover {
+    background-color: #ff02026b;
+}
+
+/* кнопки редактрования и удаления */
+.todo-id__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    & button {
+        width: 110px;
+        background-color: transparent;
+        border: 1px solid #ffffffc9;
+        border-radius: 5px;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    & button:hover {
+        background-color: #ffffff71;
+    }
+}

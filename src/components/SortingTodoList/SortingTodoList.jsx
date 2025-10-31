@@ -1,3 +1,5 @@
+import './SortingTodoList.css'
+
 export default function SortingTodoList({
   searchQuery,
   setSearchQuery,

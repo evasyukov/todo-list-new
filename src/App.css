@@ -89,8 +89,11 @@
 }
 
 .todo__title {
-  max-width: 500px;
-  word-break: break-word;
+  max-width: 350px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .todo__management {

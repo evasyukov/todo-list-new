@@ -5,7 +5,7 @@ import {
   requestAddTodos,
   requestRemoveTodos,
   requestUpdateTodos,
-} from "./hooks"
+} from "./api"
 
 import AdditionForm from "./components/AdditionForm"
 import SortingTodoList from "./components/SortingTodoList"
@@ -22,8 +22,8 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState("") // поиск дела
   const [isSorting, setIsSorting] = useState(false) // флаг для сортировки
 
-  const [validateText, SetValidateText] = useState(null)
-  const [isDisabledSubmit, SetIsDisabledSubmit] = useState(false) // флаг для отключения кнопки отправки
+  const [validateText, setValidateText] = useState(null)
+  const [isDisabledSubmit, setIsDisabledSubmit] = useState(false) // флаг для отключения кнопки отправки
 
   const refreshTodos = () => setRefresh(!refresh)
 
@@ -35,8 +35,8 @@ export default function App() {
     setTodoText(event.target.value)
 
     // обнуляем флаги для валидации при вводе текста
-    SetValidateText(null)
-    SetIsDisabledSubmit(false)
+    setValidateText(null)
+    setIsDisabledSubmit(false)
   }
 
   // добавление дела
@@ -44,8 +44,8 @@ export default function App() {
     event.preventDefault()
 
     if (todoText < 1) {
-      SetValidateText("Текст дела не должен быть пустым")
-      SetIsDisabledSubmit(true)
+      setValidateText("Текст дела не должен быть пустым")
+      setIsDisabledSubmit(true)
     } else {
       requestAddTodos(todoText, refreshTodos)
       setTodoText("")

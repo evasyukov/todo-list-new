@@ -49,34 +49,3 @@ json-server --watch src/db.json --port 3005
 ```
 npm run dev
 ```
---- 
-# Структура проекта 
-```
-src/
-├─ api/                          # API и функции для работы с задачами
-│  ├─ index.js                   # центральный экспорт API-функций
-│  ├─ requestAddTodos.js         # функция добавления задачи
-│  ├─ requestRemoveTodos.js      # функция удаления задачи
-│  ├─ requestUpdateTodos.js      # функция обновления задачи
-│  └─ use-request-get-todos.js   # хук для получения списка задач
-│
-├─ components/                   # компоненты интерфейса
-│  ├─ AdditionForm/              # форма добавления задачи
-│  │  ├─ AdditionForm.jsx
-│  │  └─ AdditionForm.css
-│  │
-│  ├─ SortingTodoList/           # компонент поиска и сортировки
-│  │  ├─ SortingTodoList.jsx
-│  │  └─ SortingTodoList.css
-│  │
-│  └─ TodoList/                  # компонент списка задач
-│     ├─ TodoList.jsx
-│     └─ TodoList.css
-│
-├─ pages/                        # страницы навигации
-│  ├─ HomePage.jsx               # главная страница со списком задач
-│  ├─ NotFoundPage.jsx           # страница 404
-│  └─ TodoPage.jsx               # страница отдельной задачи
-│
-└─ db.json                       # база данных JSON
-```

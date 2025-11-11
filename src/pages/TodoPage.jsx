@@ -17,7 +17,7 @@ export function TodoPage() {
   const { saveTitle, deleteTodo, toggleCompleted } = useTodos()     // хуки для работы с делами
 
   useEffect(() => {
-    const fetchTodo = async () => {
+    async function fetchTodo() {
       try {
         const todoId = await todosAPI.getTodoById(id)
         if (!todoId.title) {

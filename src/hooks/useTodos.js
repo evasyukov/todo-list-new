@@ -21,7 +21,7 @@ export function useTodos() {
   }, [initialTodos])
 
   // получаем текст дела
-  const handleChange = (event) => {
+  function handleChange(event) {
     setTodoText(event.target.value)
 
     // обнуляем флаги для валидации при вводе текста
@@ -30,7 +30,7 @@ export function useTodos() {
   }
 
   // добавление дела
-  const submitTodos = async (event) => {
+  async function submitTodos(event) {
     event.preventDefault()
 
     if (todoText.trim().length < 1) {
@@ -49,7 +49,7 @@ export function useTodos() {
   }
 
   // удаляем дело из списка
-  const deleteTodo = async (todo, navigate) => {
+  async function deleteTodo(todo, navigate) {
     try {
       await todosAPI.removeTodo(todo.id)
       navigate("/")
@@ -59,7 +59,7 @@ export function useTodos() {
   }
 
   // сохраняем изменения
-  const saveTitle = async (todo, editingText, setTodo, setEditing) => {
+  async function saveTitle(todo, editingText, setTodo, setEditing) {
     try {
       await todosAPI.updateTodo(todo.id, { title: editingText })
       setTodo((prev) => ({ ...prev, title: editingText }))
@@ -70,7 +70,7 @@ export function useTodos() {
   }
 
   // изменение статуса дела
-  const toggleCompleted = async (todo, setTodo) => {
+  async function toggleCompleted(todo, setTodo) {
     try {
       const updated = !todo.completed
       await todosAPI.updateTodo(todo.id, { completed: updated })

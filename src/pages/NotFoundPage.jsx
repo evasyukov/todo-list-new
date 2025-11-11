@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-function NotFoundPage() {
+export function NotFoundPage() {
   return (
     <div className="not-found">
       <h2>Страница не найдена</h2>
@@ -8,5 +8,3 @@ function NotFoundPage() {
     </div>
   )
 }
-
-export default NotFoundPage

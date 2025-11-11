@@ -1,6 +1,6 @@
 import './AdditionForm.css'
 
-export default function AdditionForm({
+export function AdditionForm({
   todoText,
   validateText,
   isDisabledSubmit,

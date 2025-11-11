@@ -1,6 +1,6 @@
 import './SortingTodoList.css'
 
-export default function SortingTodoList({
+export function SortingTodoList({
   searchQuery,
   setSearchQuery,
   isSorting,

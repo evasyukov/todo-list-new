@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom"
 
-import './TodoList.css'
+import "./TodoList.css"
 
-export default function TodoList({ todos, isLoading, errorText }) {
+export function TodoList({ todos, isLoading, errorText }) {
   const navigate = useNavigate()
 
   if (isLoading) return <div>Загрузка...</div>
@@ -19,7 +19,7 @@ export default function TodoList({ todos, isLoading, errorText }) {
             {todo.title}
           </div>
 
-          <div className={`todo_completed ${todo.completed}`} >
+          <div className={`todo_completed ${todo.completed}`}>
             {todo.completed ? "выполнено" : "не выполнено"}
           </div>
         </div>

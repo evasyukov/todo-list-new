@@ -53,8 +53,8 @@ export function useTodos() {
     try {
       await todosAPI.removeTodo(todo.id)
       navigate("/")
-    } catch (err) {
-      console.error("Ошибка при удалении:", err)
+    } catch (error) {
+      console.error("Ошибка при удалении:", error)
     }
   }
 
@@ -64,8 +64,8 @@ export function useTodos() {
       await todosAPI.updateTodo(todo.id, { title: editingText })
       setTodo((prev) => ({ ...prev, title: editingText }))
       setEditing(false)
-    } catch (err) {
-      console.error("Ошибка при сохранении:", err)
+    } catch (error) {
+      console.error("Ошибка при сохранении:", error)
     }
   }
 
@@ -75,8 +75,8 @@ export function useTodos() {
       const updated = !todo.completed
       await todosAPI.updateTodo(todo.id, { completed: updated })
       setTodo((prev) => ({ ...prev, completed: updated }))
-    } catch (err) {
-      console.error("Ошибка при изменении статуса:", err)
+    } catch (error) {
+      console.error("Ошибка при изменении статуса:", error)
     }
   }
 

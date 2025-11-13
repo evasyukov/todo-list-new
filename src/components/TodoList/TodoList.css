@@ -23,14 +23,16 @@
   max-width: 300px;
 
   cursor: pointer;
+  color: #dedede;
+  text-decoration: none;
 
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.todo__title:hover{
-  color: #fff;
+.todo__title:hover {
+  color: #ffffff;
 }
 
 .todo__management {

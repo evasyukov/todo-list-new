@@ -4,7 +4,7 @@ import { todosAPI } from "../api/api.todos"
 import { useRequestGetTodos } from "../hooks"
 
 export function useTodos() {
-  const [todos, setTodos] = useState([])                                     // список дел
+  const [todosLocal, setTodosLocal] = useState([])                           // список дел
   const [todoText, setTodoText] = useState("")                               // текст дела
   const [searchQuery, setSearchQuery] = useState("")                         // поиск дела
   const [isSorting, setIsSorting] = useState(false)                          // флаг для сортировки
@@ -16,7 +16,7 @@ export function useTodos() {
   // сохраняем начальные данные в локальное состояние
   useEffect(() => {
     if (initialTodos.length > 0) {
-      setTodos(initialTodos)
+      setTodosLocal(initialTodos)
     }
   }, [initialTodos])
 
@@ -41,7 +41,7 @@ export function useTodos() {
 
     try {
       const newTodo = await todosAPI.addTodo(todoText)
-      setTodos((prevTodos) => [...prevTodos, newTodo])
+      setTodosLocal((prevTodos) => [...prevTodos, newTodo])
       setTodoText("")
     } catch (error) {
       console.error("Ошибка при добавлении задачи:", error)
@@ -81,7 +81,7 @@ export function useTodos() {
   }
 
   // поиск дела по запросу и сортировка
-  const filteredTodos = todos
+  const filteredTodos = todosLocal
     .filter((todo) =>
       todo.title.toLowerCase().includes(searchQuery.toLowerCase())
     )
@@ -90,7 +90,7 @@ export function useTodos() {
     )
 
   return {
-    // получшение дела
+    // получение дела
     todos: filteredTodos,
     isLoading,
     errorText,
